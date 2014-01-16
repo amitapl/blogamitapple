@@ -1,9 +1,9 @@
 ﻿namespace Snow.Models
 {
-    using Enums;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Enums;
 
     public class Post
     {
@@ -71,6 +71,11 @@
                     case "metadescription":
                         {
                             MetaDescription = (string)setting.Value;
+                            break;
+                        }
+                    case "url":
+                        {
+                            Url = (string)setting.Value;
                             break;
                         }
                 }

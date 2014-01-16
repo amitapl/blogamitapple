@@ -58,6 +58,11 @@
         {
             foreach (var postHeader in posts)
             {
+                if (postHeader.Url != null && postHeader.Url.StartsWith("/"))
+                {
+                    continue;
+                }
+
                 var urlFormat = "/" + settings.UrlFormat.Trim('/') + "/";
 
                 if (postHeader.Published == Published.Draft)
